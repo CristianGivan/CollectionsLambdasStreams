@@ -5,12 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae311c22-768a-4dbc-865f-706f74002c97" name="Changes" comment="exercitii">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/Helper/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/Helper/Department.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/Helper/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/Helper/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/Helper/Transaction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Exercises/SmallExcercises.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exercises/SmallExcercises.java" afterDir="false" />
     </list>
@@ -40,18 +34,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/crist_7j0v53l/OneDrive/Java/Curs_JustCodeIT_2022/CollectionsLambdasStreams",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/crist_7j0v53l/OneDrive/Java/Curs_JustCodeIT_2022/CollectionsLambdasStreams&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="SmallExcercises" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercises.SmallExcercises" />
@@ -83,7 +77,9 @@
       <workItem from="1663572364324" duration="2696000" />
       <workItem from="1663610958274" duration="1772000" />
       <workItem from="1663659635373" duration="2911000" />
-      <workItem from="1663742151205" duration="20060000" />
+      <workItem from="1663742151205" duration="21710000" />
+      <workItem from="1663817426327" duration="9231000" />
+      <workItem from="1663904110649" duration="3031000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1663572458768</created>
@@ -99,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663742701089</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="exercitii">
+      <created>1663780600717</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663780600717</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,12 +125,24 @@
     <option name="LAST_COMMIT_MESSAGE" value="exercitii" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Exercises/SmallExcercises.java</url>
+          <line>362</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="strings[i]" />
         <watch expression="badWords.get(j)" />
         <watch expression="badWordsFound" />
         <watch expression="strings[i].equals(badWords.get(j))" />
+        <watch expression="price.get(j)" />
+        <watch expression="price.get(i)" />
+        <watch expression="maxProfit" />
       </configuration>
     </watches-manager>
   </component>
