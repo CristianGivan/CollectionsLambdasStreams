@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ae311c22-768a-4dbc-865f-706f74002c97" name="Changes" comment="exercitii">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exercises/SmallExcercises.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exercises/SmallExcercises.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +45,20 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.AlgorithmsCollections">
+    <configuration name="AlgorithmsCollections" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercises.AlgorithmsCollections" />
+      <module name="CollectionsLambdasStreams" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SmallExcercises" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercises.SmallExcercises" />
       <module name="CollectionsLambdasStreams" />
@@ -62,6 +74,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AlgorithmsCollections" />
         <item itemvalue="Application.SmallExcercises" />
       </list>
     </recent_temporary>
@@ -79,7 +92,8 @@
       <workItem from="1663659635373" duration="2911000" />
       <workItem from="1663742151205" duration="21710000" />
       <workItem from="1663817426327" duration="9231000" />
-      <workItem from="1663904110649" duration="3031000" />
+      <workItem from="1663904110649" duration="3641000" />
+      <workItem from="1664164138357" duration="438000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1663572458768</created>
@@ -102,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663780600717</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="exercitii">
+      <created>1663907177130</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663907177130</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +152,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/Exercises/SmallExcercises.java</url>
           <line>362</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Exercises/SmallExcercises.java</url>
+          <line>278</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
