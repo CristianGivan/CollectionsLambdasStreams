@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae311c22-768a-4dbc-865f-706f74002c97" name="Changes" comment="exercitii">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Curs/MethodReferences.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exercises/AlgorithmsCollections.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exercises/AlgorithmsCollections.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +47,26 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.AlgorithmsCollections">
+  <component name="RunManager" selected="Application.MethodReferences">
     <configuration name="AlgorithmsCollections" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercises.AlgorithmsCollections" />
       <module name="CollectionsLambdasStreams" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MethodReferences" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Curs.MethodReferences" />
+      <module name="CollectionsLambdasStreams" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Curs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -74,6 +89,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MethodReferences" />
         <item itemvalue="Application.AlgorithmsCollections" />
         <item itemvalue="Application.SmallExcercises" />
       </list>
@@ -93,7 +109,10 @@
       <workItem from="1663742151205" duration="21710000" />
       <workItem from="1663817426327" duration="9231000" />
       <workItem from="1663904110649" duration="3641000" />
-      <workItem from="1664164138357" duration="438000" />
+      <workItem from="1664164138357" duration="1864000" />
+      <workItem from="1664247180177" duration="220000" />
+      <workItem from="1664247528941" duration="3557000" />
+      <workItem from="1664259714041" duration="4600000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1663572458768</created>
@@ -123,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663907177130</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="exercitii">
+      <created>1664164833128</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664164833128</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,12 +176,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Exercises/SmallExcercises.java</url>
-          <line>362</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Exercises/SmallExcercises.java</url>
-          <line>278</line>
+          <line>275</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
