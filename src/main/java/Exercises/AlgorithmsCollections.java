@@ -11,7 +11,12 @@ public class AlgorithmsCollections {
         //multiplyOtherElements();
         //isDuplicate();
         //findMessingConsecutiveElement();
-        orderConsecutiveDuplicate();
+        //orderConsecutiveDuplicate();
+        //maximDifferenceSmallerNumberFirs();
+        //findNearestNumber();
+        //moveZeroAtTheEnd();
+        //subArraySum();
+        rotateToRight();
     }
 
     public static void findingMaxProfit() {
@@ -174,8 +179,8 @@ public class AlgorithmsCollections {
         // trec la urmatorul elemnt din lista veche
         // creez o noua lista in care numar cate elemente sunt de tipul acela si le trec intr-o noua lista dupa care trec la un alt element care nu este in lista noua creata si numar elementele
         // le ordonez.
-        List<Integer> numbers =new ArrayList<>();
-        List<Integer> numbersOrdered =new ArrayList<>();
+        List<Integer> numbers = new ArrayList<>();
+        List<Integer> numbersOrdered = new ArrayList<>();
         numbers.add(1);
         numbers.add(2);
         numbers.add(3);
@@ -183,11 +188,11 @@ public class AlgorithmsCollections {
         numbers.add(2);
         numbers.add(1);
         System.out.println(numbers);
-        numbersOrdered=numbers.stream().sorted().collect(Collectors.toList());
+        numbersOrdered = numbers.stream().sorted().collect(Collectors.toList());
         System.out.println(numbersOrdered);
     }
 
-    public static void maximDifferenceSmallerNumberFirs(){
+    public static void maximDifferenceSmallerNumberFirs() {
 /*
 
         7. Gaseste diferenta maxima intre 2 numere dintr-o lista, astfel incat elementul mai mic sa apara inaintea elementului mai mare
@@ -195,17 +200,226 @@ public class AlgorithmsCollections {
         Output: 7 (perechea de numere care indeplineste conditia este (2,9)
 */
 
-        Integer[] numbers ={2,7,9,5,1,3,5};
-        Stream<Integer> intStream=  Arrays.stream(numbers);
+        Integer[] numbers = {2, 7, 9, 5, 1, 3, 5};
+        Stream<Integer> intStream = Arrays.stream(numbers);
 
         //ieu primul element si fac diferenta cu toate celelate numere mai mari ca el pun intru maxim rezultatul
         // ieu al doilea numa si fac la fel daca gasesc o diferenta mai mare o trec in acumulator
         //afises acumulatorul
         /*V2
-        * gasesc minimul si maximul daca minimul este dupa maxim ma opresc
-        * daca minimul este dupa maxim
-        * */
+         * gasesc minimul si maximul daca minimul este dupa maxim ma opresc
+         * daca minimul este dupa maxim
+         * */
+        int maximumDifferance = Integer.MIN_VALUE;
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = i; j < numbers.length - 1; j++) {
+                if (numbers[j + 1] - numbers[i] > maximumDifferance) {
+                    maximumDifferance = numbers[j + 1] - numbers[i];
+                }
+                // System.out.println(maximumDifferance);
+            }
+        }
+        System.out.println(maximumDifferance);
+        int maximumDifferance1 = Integer.MIN_VALUE;
+        for (int i = 0; i < numbers.length; i++) {
+            Optional<Integer> maxNumberAfterI = Arrays.stream(numbers)
+                    .skip(i)
+                    .max(Integer::compare);
+            int maxDif = maxNumberAfterI.orElse(0) - numbers[i];
+            if (maxDif > maximumDifferance1) {
+                maximumDifferance1 = maxDif;
+            }
+        }
+        System.out.println(maximumDifferance1);
     }
 
+    public static void findNearestNumber() {
+         /* 8. Gaseste cea mai apropiata valoare de un anumit numar dintr-o lista de numere
+    Exemplu: Input: [2,7,9,5,1,3,5], 8
+    Output: 9 sau 7 sunt cele mai apropiate valori de 8*/
+
+        int[] numbers = {2, 7, 9, 5, 1, 3, 5};
+        int number = 8;
+        double aboveNumber = Double.MAX_VALUE;
+        double belowNumber = Double.MIN_VALUE;
+        List<Integer> numbersClosest = new ArrayList<>();
+        /*v1
+         * sortez numerele
+         * verific primul numer mai mare ca numarul selectat
+         * fac diferenta dintre acel numar si numarul mai mic din lista si vad care ii mai aproape*/
+        /*v2
+         * fac diferenta fiecarui numar cu numarul selecta si aflu cea mai mica diferenta*/
+        /*v3
+         * filtrez numerele mai mari decat numarul selectat si  si aflu minimuldin sirul acela
+         * filtrez numerele mai mici si aflu maximul sirului
+         * verific daca diferenta idnte cele doua numere fata de numarul catutat este egala atunci le pun pe ambele daca nu o sa il pun cel cu diferenta mai mica */
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (number == numbers[i]) {
+                numbersClosest.add(number);
+                break;
+            }
+            if (belowNumber < numbers[i] - number) {
+                belowNumber = number - numbers[i];
+            }
+            if ((aboveNumber > numbers[i] - number) && (numbers[i] - number > 0)) {
+                aboveNumber = numbers[i] - number;
+            }
+        }
+        if (!numbersClosest.contains(number) & belowNumber * -1 == aboveNumber) {
+            numbersClosest.add(number + (int) belowNumber);
+            numbersClosest.add(number - (int) belowNumber);
+
+        }
+        System.out.println(numbersClosest);
+        numbersClosest.clear();
+        System.out.println(numbersClosest);
+        //System.out.println("min: "+belowNumber+" max: "+aboveNumber);
+
+        Integer[] numbers1 = {2, 7, 9, 5, 1, 3, 5};
+        Integer number1 = number;
+        List<Integer> numberList = convertArrayToList(numbers1);
+        Optional<Integer> aboveNr = numberList.stream().filter(x -> x >= number1).min(Integer::compareTo);
+        Optional<Integer> belowNr = numberList.stream().filter(x -> x <= number1).max((x,y)->x.compareTo(y));
+        System.out.println(aboveNr);
+        System.out.println(belowNr);
+
+
+        if (numberList.stream().anyMatch(x -> x == number)) {
+            numbersClosest.add(number);
+        } else if (aboveNr.orElse(Integer.MAX_VALUE) - number == number - belowNr.orElse(Integer.MIN_VALUE)) {
+            numbersClosest.add(aboveNr.orElse(Integer.MAX_VALUE));
+            numbersClosest.add(belowNr.orElse(Integer.MIN_VALUE));
+        }
+
+        System.out.println(numbersClosest);
+    }
+
+    public static void moveZeroAtTheEnd() {
+/*
+
+        9. Muta toate zero-urile dintr-un array la final
+        Exemplu: Input: [6,0,8,2,3,0,4,0,1]
+        Output: [6,8,2,3,4,1,0,0,0]
+
+*/
+        /*v01
+        * verific fiecare element daca am identificat unu il mut siftez foate elementele iar la sfarsit pun un zero*/
+        /*v2
+        * numar cati de 0 sunt
+        * elimin toti 0
+        * adaug la sfarzit cati de 0 am numarat*/
+    Integer[] input ={6,0,8,2,3,0,4,0,1};
+        for (int i = 0; i < input.length; i++) {
+            System.out.println(input[i]);
+        }
+        for (int i = 0; i < input.length; i++) {
+            if (input[i]==0){
+                for (int j = i+1; j < input.length; j++) {
+                    input[j-1]=input[j];
+                }
+                input[input.length-1]=0;
+            }
+        }
+        System.out.println("--------------");
+        for (int i = 0; i < input.length; i++) {
+            System.out.println(input[i]);
+        }
+
+        List<Integer> integerList= Arrays.stream(input).collect(Collectors.toList());
+        Long numberOfZero=integerList.stream().filter(x->x==0).count();
+        List<Integer>listWithoutZero=integerList.stream().filter(x->x!=0).collect(Collectors.toList());
+        List<Integer>listWithZero=listWithoutZero;
+        for (int i = 0; i < numberOfZero; i++) {
+            listWithZero.add(0);
+
+        }
+        System.out.println(listWithZero);
+/*todo de ce nu merge;
+
+        List<Integer>newList=integerList;
+        System.out.println(newList);
+        for (Integer i:integerList){
+            if (i==0){
+                newList.remove(i);
+                newList.add(0);
+            }
+        }
+        System.out.println(newList);
+*/
+
+        System.out.println();
+
+    }
+
+    public static void subArraySum(){
+/*
+
+        10. Gaseste un subarray dintr-un array,  care sa aiba o anumita suma
+        Un subarray are capatul din stanga inaintea capatului din dreapta in array-ul original.
+                Array-ul original poate avea doar numere pozitive
+        Exemplu: Input: [1,4,20,3,10,5], sum=33
+        Ouput:suma a fost gasita intre indicii 2 si 4 (20+3+10=33)
+        Input: [1,4], sum = 0
+        Output: niciun subarray nu a fost gasit
+*/
+    Integer[] array={1,4,20,3,10};
+    Integer sumToCheck=33;
+    Integer minIndex=0;
+    Integer maxIndex = 0;
+    Integer sum;
+
+
+        for (int i = 0; i < array.length; i++) {
+            int sumIndex=i;
+            sum=0;
+            while (sum<sumToCheck&&sumIndex<array.length){
+                sum+=array[sumIndex];
+                sumIndex++;
+            }
+            if (sum==sumToCheck){
+                minIndex=i;
+                maxIndex=sumIndex-1;
+                break;
+            }
+        }
+        System.out.println(minIndex);
+        System.out.println(maxIndex);
+    }
+
+    public static void rotateToRight(){
+/*
+
+        11. Roteste un array la stanga cu o pozitie
+        Exemplu: Input: [1,2,3,4,5]
+        Output: [5,1,2,3,4]
+
+        Rezolva apoi problema in mod general, adica roteste un array la stanga cu n pozitii
+        Exemplu: Input: [1,2,3,4,5] , n=2
+        Output: [3,4,5,1,2] - array-ul s-a rotit cu 2 pozitii
+*/
+        Integer[] array={1,2,3,4,5};
+        List<Integer> list=convertArrayToList(array);
+        int numberOfRotations=3;
+        List<Integer> result=new ArrayList<>();
+        /*v1
+        * pentru n ori ieu size*/
+
+        for (int i = numberOfRotations; i >=1; i--) {
+            result.add(list.get(list.size()-i));
+        }
+        for (int i = 0; i < list.size()-numberOfRotations; i++) {
+         result.add(list.get(i));
+        }
+        System.out.println(result);
+
+    }
+    public static <T> List<T> convertArrayToList(T[] array) {
+        List<T> list = new ArrayList<>();
+        for (T t : array) {
+            list.add(t);
+        }
+        return list;
+    }
 
 }

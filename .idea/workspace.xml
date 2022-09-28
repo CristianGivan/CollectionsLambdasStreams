@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae311c22-768a-4dbc-865f-706f74002c97" name="Changes" comment="exercitii">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Curs/MethodReferences.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/ShoppingCard/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/ShoppingCard/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/ShoppingCard/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/ShoppingCard/ShoppingCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Exercises/AlgorithmsCollections.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exercises/AlgorithmsCollections.java" afterDir="false" />
     </list>
@@ -17,6 +20,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -47,7 +51,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.MethodReferences">
+  <component name="RunManager" selected="Application.AlgorithmsCollections">
     <configuration name="AlgorithmsCollections" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercises.AlgorithmsCollections" />
       <module name="CollectionsLambdasStreams" />
@@ -89,8 +93,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MethodReferences" />
         <item itemvalue="Application.AlgorithmsCollections" />
+        <item itemvalue="Application.MethodReferences" />
         <item itemvalue="Application.SmallExcercises" />
       </list>
     </recent_temporary>
@@ -112,7 +116,8 @@
       <workItem from="1664164138357" duration="1864000" />
       <workItem from="1664247180177" duration="220000" />
       <workItem from="1664247528941" duration="3557000" />
-      <workItem from="1664259714041" duration="4600000" />
+      <workItem from="1664259714041" duration="7959000" />
+      <workItem from="1664343094220" duration="20137000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1663572458768</created>
@@ -149,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664164833128</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="exercitii">
+      <created>1664273535538</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664273535538</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +191,16 @@
           <line>275</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Exercises/AlgorithmsCollections.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Exercises/AlgorithmsCollections.java</url>
+          <line>407</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -190,6 +212,9 @@
         <watch expression="price.get(j)" />
         <watch expression="price.get(i)" />
         <watch expression="maxProfit" />
+        <watch expression="numbers[j+1]" />
+        <watch expression="numbers[i]" />
+        <watch expression="maximumDifferance" />
       </configuration>
     </watches-manager>
   </component>
